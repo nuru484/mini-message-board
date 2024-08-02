@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <a href="/new">Add a New Message</a>
+    <ul>
+        <% messages.forEach(function(message, id) { %>
+            <li>
+                <strong><%= message.user %></strong>: <%= message.text %> <em>(<%= message.added.toLocaleString() %>)</em>
+               <button><a href="/message/<%= id %>">Open</a> </button> 
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
