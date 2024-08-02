@@ -1,5 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
+const path = require('path'); 
 const newMessageRouter = require('./routes/new-message');
 
 const app = express();
@@ -7,6 +8,9 @@ app.set('view engine', 'ejs');
 
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
+
+// Middleware to serve static files
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Sample messages
 const messages = [
