@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
-</head>
-<body>
+  </head>
+  <body>
     <h1><%= title %></h1>
-    <a href="/new">Add a New Message</a>
-    <ul>
-        <% messages.forEach(function(message, id) { %>
-            <li>
-                <strong><%= message.user %></strong>: <%= message.text %> <em>(<%= message.added.toLocaleString() %>)</em>
-               <button><a href="/message/<%= id %>">Open</a> </button> 
-            </li>
-        <% }) %>
-    </ul>
-</body>
+  </body>
 </html>
