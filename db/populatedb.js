@@ -3,14 +3,14 @@ const pool = require('./pool');
 const createTableSQL = `
   CREATE TABLE IF NOT EXISTS messages (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    user VARCHAR(255) NOT NULL,
+    "user" VARCHAR(255) NOT NULL,  
     message TEXT NOT NULL,
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )
 `;
 
 const insertMessagesSQL = `
-  INSERT INTO messages (user, message)
+  INSERT INTO messages ("user", message) 
   VALUES 
   ('John Doe', 'Hello World!'),
   ('Jane Smith', 'This is a message board.'),

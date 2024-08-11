@@ -1,0 +1,80 @@
+/* styles/indexStyle.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: #4caf50; /* Green color for consistency */
+  border-bottom: 2px solid #ddd;
+  margin: 0;
+}
+
+/* List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px; /* Center list and limit width */
+}
+
+li {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 20px; /* Space between list items */
+  padding: 15px; /* Space inside list items */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Strong Tag Styling */
+strong {
+  color: #333;
+}
+
+/* Button Styling */
+button {
+  background: #4caf50; /* Green background */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #45a049; /* Darker green on hover */
+}
+
+/* Form Styling */
+form {
+  display: inline;
+}
+
+/* Add Message Link Styling */
+a {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  color: #4caf50; /* Green color for consistency */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px; /* Larger font size for emphasis */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

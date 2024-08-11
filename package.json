@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": " node --watch --env-file=.env app"
+    "dev": " node --watch --env-file=.env app postgresql://nurudeen:0553997465@localhost:5432/top_users "
   },
   "keywords": [],
   "author": "",

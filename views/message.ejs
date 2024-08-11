@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/messageStyle.css" />
     <title><%= title %></title>
-    <link rel="stylesheet" type="text/css" href="/styles/style.css">
-</head>
-<body>
+  </head>
+  <body>
     <h1><%= title %></h1>
-    <p><strong>User:</strong> <%= message.user %></p>
-    <p><strong>Message:</strong> <%= message.text %></p>
-    <p><strong>Date:</strong> <%= message.added.toLocaleString() %></p>
+
+    <% if (messages.length > 0) { %>
+    <ul>
+      <% messages.forEach(message => { %>
+      <li>
+        <p><strong>User:</strong> <%= message.user %></p>
+        <p><strong>Message:</strong> <%= message.message %></p>
+      </li>
+      <% }) %>
+    </ul>
+    <% } else { %>
+    <p>No messages found.</p>
+    <% } %>
+
     <a href="/">Back to message board</a>
-</body>
+  </body>
 </html>
