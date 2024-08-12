@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', messagesRouter);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
