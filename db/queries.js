@@ -22,12 +22,11 @@ async function addMessage(user, message) {
 
 async function getMessage(user, message) {
   try {
-    // console.log(`Searching for user: ${user} and message: ${message}`);
     const query =
       'SELECT * FROM messages WHERE "user" ILIKE $1 OR message ILIKE $2'; // Changed LIKE to ILIKE for case-insensitive search
     const values = [`%${user}%`, `%${message}%`];
     const { rows } = await pool.query(query, values);
-    // console.log('Search results:', rows);
+
     return rows;
   } catch (err) {
     console.error('Error executing search query', err.stack);

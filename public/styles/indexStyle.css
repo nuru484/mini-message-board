@@ -1,5 +1,3 @@
-/* styles/indexStyle.css */
-
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
@@ -42,7 +40,6 @@ strong {
 
 /* Button Styling */
 button {
-  background: #4caf50; /* Green background */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -56,25 +53,97 @@ button {
 }
 
 button:hover {
-  background: #45a049; /* Darker green on hover */
+  opacity: 0.9; /* Slight change in opacity on hover */
 }
 
-/* Form Styling */
-form {
-  display: inline;
+/* Search Form Styling */
+.search-form {
+  max-width: 600px; /* Same as form max-width for consistency */
+  margin: 20px auto;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px; /* Space between input and button */
+}
+
+.search-form input[type='text'] {
+  flex: 1; /* Takes up the available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-form button {
+  background-color: #4caf50; /* Green color for consistency */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Actions Container */
+.actions-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between link and button */
+  margin: 20px auto;
 }
 
 /* Add Message Link Styling */
-a {
-  display: block;
-  text-align: center;
-  margin: 20px auto;
-  color: #4caf50; /* Green color for consistency */
+.add-message-link {
+  background-color: #4caf50; /* Green color for the link background */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px; /* Larger font size for emphasis */
+  border-radius: 4px;
+  display: inline-block;
 }
 
-a:hover {
-  text-decoration: underline; /* Underline on hover */
+.add-message-link:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Delete All Form Styling */
+.delete-all-form {
+  display: flex;
+  align-items: center;
+}
+
+/* Delete All Messages Button Styling */
+.delete-all-form button {
+  background-color: #f44336; /* Red background for the delete button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.delete-all-form button:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+/* Delete Button Inside List Item */
+li form button {
+  background-color: #f44336; /* Red background for delete buttons inside list items */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+li form button:hover {
+  background-color: #e53935; /* Darker red on hover */
 }

@@ -9,12 +9,20 @@
   <body>
     <h1><%= title %></h1>
 
+    <!-- Search Form -->
+    <form action="/search" method="GET" class="search-form">
+      <input
+        type="text"
+        name="query"
+        placeholder="Search messages..."
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
     <ul>
-      <% if (messages && messages.length > 0) { %>
-      <form action="/delete-all" method="POST" style="display: inline">
-        <button type="submit">Delete All Messages</button>
-      </form>
-      <% messages.forEach(function(message) { %>
+      <% if (messages && messages.length > 0) { %> <%
+      messages.forEach(function(message) { %>
       <li>
         <strong>User:</strong> <%= message.user %> <strong>Message:</strong> <%=
         message.message %>
@@ -29,6 +37,12 @@
       <% } %>
     </ul>
 
-    <a href="/new">Add a new message</a>
+    <!-- Actions Container -->
+    <div class="actions-container">
+      <a href="/new" class="add-message-link">Add a new message</a>
+      <form action="/delete-all" method="POST" class="delete-all-form">
+        <button type="submit">Delete All Messages</button>
+      </form>
+    </div>
   </body>
 </html>

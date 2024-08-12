@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": " node --watch --env-file=.env app postgresql://nurudeen:0553997465@localhost:5432/top_users "
+    "start": " node app postgresql://postgres:SaFHxCgQsNlMnEolShlRomhTBXNdjXOr@postgres.railway.internal:5432/railway",
+    "dev": " node --watch app postgresql://postgres:SaFHxCgQsNlMnEolShlRomhTBXNdjXOr@roundhouse.proxy.rlwy.net:18090/railway"
   },
   "keywords": [],
   "author": "",

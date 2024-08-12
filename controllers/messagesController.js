@@ -18,7 +18,6 @@ const singleMessageGet = async (req, res) => {
       title: 'Found Messages',
       messages: messages,
     });
-    console.log('Database:', messages);
   } catch (error) {
     console.error('Error fetching messages', error);
     res.status(500).send('Internal Server Error');
@@ -53,7 +52,6 @@ const deleteAllMessages = async (req, res) => {
 const deleteSingleMessage = async (req, res) => {
   try {
     const { id } = req.body;
-    console.log(id);
     await db.deleteMessageById(id);
     res.redirect('/');
   } catch (error) {
