@@ -17,7 +17,7 @@ const insertMessagesSQL = `
   ('Alex Johnson', 'Post your message here.')
 `;
 
-(async () => {
+const populatedb = async () => {
   try {
     // Create table
     await pool.query(createTableSQL);
@@ -29,7 +29,8 @@ const insertMessagesSQL = `
   } catch (err) {
     console.error('Error populating database:', err);
   } finally {
-    // Close the pool
-    await pool.end();
+    console.log('Done initializing');
   }
-})();
+};
+
+module.exports = populatedb;
